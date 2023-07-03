@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'opensansbold';
+  src: url('../fonts/opensans-bold.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'opensansregular';
+  src: url('../fonts/opensans-regular.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'opensanssemibold';
+  src: url('../fonts/opensans-semibold.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+:root {
+  --font-regular: opensansregular, sans-serif;
+  --font-bold: opensansbold, sans-serif;
+  --font-semibold: opensanssemibold, sans-serif;
+}

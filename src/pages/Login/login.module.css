@@ -1,0 +1,16 @@
+.login {
+  display: grid;
+  justify-items: center;
+  gap: 30px;
+
+  padding: 12px;
+
+  max-width: 250px;
+}
+
+.login__title {
+  font-family: var(--font-bold);
+  font-size: 2rem;
+
+  color: #47A992;
+}

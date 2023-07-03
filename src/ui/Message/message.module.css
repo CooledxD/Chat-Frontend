@@ -1,0 +1,25 @@
+.message {
+  display: inline-grid;
+  justify-self: center;
+  text-align: center;
+  padding: 6px;
+
+  border-radius: 6px;
+
+  font-size: 1.1rem;
+}
+
+/* theme */
+.message {
+  font-family: var(--font-semibold);
+}
+
+/* state */
+
+.isError {
+  color: #F55050;
+}
+
+.isSuccess {
+  color: #38E54D;
+}

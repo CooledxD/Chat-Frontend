@@ -1,0 +1,10 @@
+.lContainer {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  font-family: var(--font-regular);
+  /* background-color: #20262E; */
+}
