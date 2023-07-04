@@ -7,21 +7,20 @@ import Button from "../../../../ui/Button/Button.js";
 import InputForm from "../../../../ui/InputForm/InputForm.js";
 
 // styles
-import styles from './registerForm.module.css'
+import styles from './loginForm.module.css'
 
-export default function RegisterForm({ submitting }) {
-  // states
+export default function LoginForm({ submitting }) {
+  // state
   const [formData, setFormData] = useState({
     username: '',
-    password: '',
-    confirmPassword: '',
+    password: ''
   })
 
   // handles
   const onChangeHandle = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     })
   }
 
@@ -49,37 +48,27 @@ export default function RegisterForm({ submitting }) {
         value={formData.password} 
         onChange={onChangeHandle} 
       />
-
-      {/* confirm password */}
-      <InputForm 
-        id={'confirmPassword'} 
-        name={'confirmPassword'} 
-        type={'password'} 
-        title={'confirm password'} 
-        value={formData.confirmPassword} 
-        onChange={onChangeHandle} 
-      />
-
+      
       {/* footer */}
       <footer className={styles.form__footer}>
         <Button
-          type={'submit'} 
+          type={'submit'}
           disabled={submitting}
         >
-          Confirm
+          Login
         </Button>
-
-        <Button 
-          to={'/'} 
+        
+        <Button
+          to={'auth/register'}
           bgColor={false}
         >
-          Already registered?
-        </Button>
+          No account?
+        </Button>  
       </footer>
     </Form>
   )
 }
 
-RegisterForm.propTypes = {
+LoginForm.propTypes = {
   submitting: PropTypes.bool,
 }

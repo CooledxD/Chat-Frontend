@@ -6,8 +6,7 @@ export default ky.create({
     beforeError: [
       async error => {
         const { message } = await error.response.json()
-        error.message = message
-        return error
+        return message
       }
     ]
   }

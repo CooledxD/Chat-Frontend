@@ -1,3 +1,3 @@
 export { default } from './components/RegisterForm/RegisterForm.js'
 
-export * from './api/register.js'
+export { action as registerAction } from './utils/action.js'
