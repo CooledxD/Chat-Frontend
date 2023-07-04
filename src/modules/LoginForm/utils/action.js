@@ -16,10 +16,12 @@ export const action = async ({ request }) => {
       refreshToken 
     } = await login(formData)
 
+    // token payload
+    const { userId } = JSON.parse(window.atob(accessToken.split('.')[1]))
+
     store.dispatch(set(accessToken))
 
-    // console.log(JSON.parse(window.atob(accessToken.split('.')[1])))
-
+    localStorage.setItem('userId', userId)
     localStorage.setItem('refreshToken', refreshToken)
 
     return {
