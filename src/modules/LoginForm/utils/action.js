@@ -1,3 +1,5 @@
+import { redirect } from 'react-router-dom'
+
 import login from '../api/login.js'
 import validation from './validation.js'
 
@@ -24,9 +26,7 @@ export const action = async ({ request }) => {
     localStorage.setItem('userId', userId)
     localStorage.setItem('refreshToken', refreshToken)
 
-    return {
-      success: true
-    }
+    return redirect('/chat')
   } catch (error) {
     if (error.message.split(' ')[0] === 'NetworkError') {
       throw new Error('503')

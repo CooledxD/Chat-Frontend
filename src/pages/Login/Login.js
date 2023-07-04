@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useActionData, useNavigate, useNavigation } from "react-router-dom";
+import React from "react";
+import { useActionData, useNavigation } from "react-router-dom";
 
 // modules
 import LoginForm from "../../modules/LoginForm/index.js";
@@ -16,13 +16,6 @@ import styles from './login.module.css'
 export default function Login() {
   const navigation = useNavigation()
   const actionData = useActionData()
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    if (actionData?.success) {
-      navigate('/chat')
-    }
-  }, [actionData, navigate])
   
   return (
     <main className={styles.login}>
