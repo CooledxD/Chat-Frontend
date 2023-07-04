@@ -6,6 +6,6 @@ export default async function register(payload) {
       json: payload
     })
   } catch (error) {
-    throw new Error(error)
+    throw new Error(error.message)
   }
 }

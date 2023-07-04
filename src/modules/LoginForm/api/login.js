@@ -8,6 +8,6 @@ export default async function login(payload) {
 
     return res
   } catch (error) {
-    throw new Error(error)
+    throw new Error(error.message)
   }
 }

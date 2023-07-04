@@ -13,7 +13,7 @@ export const action = async ({ request }) => {
       success: 'success'
     }
   } catch (error) {
-    if (error.message.split(' ')[0] === 'TypeError:') {
+    if (error.message.split(' ')[0] === 'NetworkError') {
       throw new Error('503')
     }
 
