@@ -1,0 +1,7 @@
+.layout {
+  display: grid;
+  align-content: start;
+
+  width: 40vw;
+  max-width: 315px;
+}
