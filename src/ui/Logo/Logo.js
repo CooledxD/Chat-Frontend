@@ -4,7 +4,7 @@ import React from "react";
 import styles from './logo.module.css'
 
 // logo
-import logo from '../../assets/img/logo/paper-plane.svg'
+import logo from './paper-plane.svg'
 
 export default function Logo() {
   return (
