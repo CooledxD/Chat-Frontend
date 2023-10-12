@@ -11,15 +11,21 @@ import Login from "./pages/Login/Login.js";
 import Register from "./pages/Register/Register.js";
 import ErrorPage from "./pages/ErrorPage/ErrorPage.js";
 import Chat from "./pages/Chat/Chat.js";
+import Dialog from "./pages/Dialog/Dialog.js";
+import Profile from './pages/Profile/Profile.js'
 
 // components
-import Layout from "./components/Layout/Layout.js";
+import GlobalLayout from "./components/GlobalLayout/GlobalLayout.js";
 import AuthRoute from "./components/AuthRoute/AuthRoute.js";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute.js";
 
 // actions
-import { registerAction } from "./modules/RegisterForm/index.js";
-import { loginAction } from "./modules/LoginForm/index.js";
+import { loginAction } from "./modules/AuthForm/index.js";
+import { registerAction } from "./modules/AuthForm/index.js";
+import { avatarAction } from "./modules/AvatarUpload/index.js";
+
+// loaders
+import { loader as loaderUserData } from "./pages/Chat/utils/loader.js";
 
 // styles
 import './index.css'
@@ -29,7 +35,7 @@ export default function App() {
     createRoutesFromElements(
       <Route 
         path="/" 
-        element={<Layout />} 
+        element={<GlobalLayout />} 
         errorElement={<ErrorPage />}
       >
         <Route element={<AuthRoute />}>
@@ -49,7 +55,18 @@ export default function App() {
           <Route 
             path="chat" 
             element={<Chat />} 
-          />
+            loader={loaderUserData}
+          >
+            <Route 
+              path=":userId" 
+              element={<Dialog />}
+            />
+            <Route 
+              path="profile" 
+              element={<Profile />}
+              action={avatarAction}
+            />
+          </Route>
         </Route>
       </Route>
     )
