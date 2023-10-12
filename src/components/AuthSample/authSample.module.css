@@ -1,0 +1,20 @@
+.layout {
+  display: grid;
+  justify-items: center;
+  gap: 30px;
+
+  max-width: 250px;
+}
+
+.header {
+  display: grid;
+  justify-items: center;
+  gap: 30px;
+}
+
+.title {
+  font-family: var(--font-bold);
+  font-size: 2rem;
+
+  color: #47A992;
+}
