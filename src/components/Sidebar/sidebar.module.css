@@ -1,0 +1,36 @@
+.sidebar {
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.list {
+  position: absolute;
+  top: 0;
+  left: 40px;
+
+  z-index: 1;
+  border: 2px solid #808080;
+  border-radius: 6px;
+
+  background-color: #DDE6ED;
+}
+
+.listItem {
+  padding: 5px 10px;
+  border-bottom: 2px solid #808080;
+  text-transform: capitalize;
+  font-family: var(--font-semibold);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.listItem:last-child {
+  border-bottom: none;
+}
+
+.listItem:hover {
+  background-color: #47A992;
+}
