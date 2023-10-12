@@ -1,0 +1,9 @@
+.layout {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+
+  width: 100%;
+  height: 100%;
+}
