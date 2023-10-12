@@ -1,0 +1,36 @@
+.switch {
+  position: relative;
+  height: 20px;
+  width: 40px;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.sliderClick {
+  background-color: #2196F3;
+}
+
+.sliderClick::before {
+  transform: translateX(20px);
+}
