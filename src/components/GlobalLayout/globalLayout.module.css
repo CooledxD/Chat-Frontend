@@ -1,0 +1,14 @@
+.lContainer {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 12px;
+
+  font-family: var(--font-regular);
+}
+
+.lContainerDark {
+  background-color: #20262E;
+}
