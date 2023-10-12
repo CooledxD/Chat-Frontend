@@ -2,41 +2,54 @@ import React from "react";
 import { useNavigation, useActionData } from "react-router-dom";
 
 // modules
-import RegisterForm from "../../modules/RegisterForm/index.js";
+import AuthForm from "../../modules/AuthForm/index.js";
 
 // components
-import Logo from "../../ui/Logo/Logo.js";
+import AuthSample from "../../components/AuthSample/AuthSample.js";
 
 // ui
-import Message from '../../ui/Message/Message.js'
-
-// styles
-import styles from './register.module.css'
+import Alert from '../../ui/Alert/Alert.js'
 
 export default function Register() {
   const navigation = useNavigation()
   const actionData = useActionData()
 
   return (
-    <main className={styles.register}>
-      {/* logo */}
-      <Logo />
-
-      {/* title */}
-      <h1 className={styles.register__title}>
-        Register
-      </h1>
-
-      <Message 
+    <AuthSample title={'Register'}>
+      {/* alert */}
+      <Alert 
         error={actionData?.error} 
         success={actionData?.success} 
       />
 
       {/* form */}
-      <RegisterForm 
-        submitting={ navigation.state === 'submitting' } 
+      <AuthForm
+        submitting={navigation.state === 'submitting'}
+        inputs={[
+          {
+            id: 'username',
+            name: 'username',
+            type: 'text',
+            title: 'username'
+          },
+          {
+            id: 'password',
+            name: 'password',
+            type: 'password',
+            title: 'password',
+          },
+          {
+            id: 'confirmPassword',
+            name: 'confirmPassword',
+            type: 'password',
+            title: 'confirm password',
+          }
+        ]}
+        subText={'Confirm'}
+        link={'/'}
+        linkText={'Already registered?'}
       />
-    </main>
+    </AuthSample>
   )
 }
 
