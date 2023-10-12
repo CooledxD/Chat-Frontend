@@ -1,0 +1,13 @@
+.header {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  height: 70px;
+  padding: 10px;
+  border-radius: 6px 6px 0 0;
+
+  background-color: #47A992;
+}
