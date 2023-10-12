@@ -1,7 +1,7 @@
 import ky from "ky";
 
 import { store } from "../../store/config.js";
-import { set } from "../../store/features/auth/authSlice.js";
+import { setAccessToken } from "../../store/features/auth/authSlice.js";
 
 export default ky.create({
   prefixUrl: import.meta.env.VITE_HOST,
@@ -30,7 +30,7 @@ export default ky.create({
             }
           }).json()
 
-          store.dispatch(set(accessToken))
+          store.dispatch(setAccessToken(accessToken))
           localStorage.setItem('refreshToken', refreshToken)
 
           request.headers.set(
