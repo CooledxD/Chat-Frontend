@@ -1,0 +1,45 @@
+.wrap {
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.button,
+.button::before,
+.button::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+}
+
+.button::before {
+  content: '';
+  top: -10px;
+}
+
+.button::after {
+  content: '';
+  top: 10px;
+}
+
+/* theme */
+
+.button,
+.button::before,
+.button::after {
+  background-color: #DDE6ED;
+}
+
+.kebab,
+.kebab::before,
+.kebab::after {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+}
