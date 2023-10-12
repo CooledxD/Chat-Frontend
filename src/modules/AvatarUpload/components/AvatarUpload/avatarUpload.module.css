@@ -1,0 +1,45 @@
+.label {
+  position: relative;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+
+  background-color: #47A992;
+  color: white;
+}
+
+.label_loading {
+  cursor: wait;
+  color: #47A992;
+}
+
+.label_loading::after {
+  content: '';
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  width: 22px;
+  height: 22px;
+
+  border: 5px solid #FFF;
+  border-bottom-color: #65647C;
+  border-radius: 50%;
+
+  animation: btn-loading 1s linear infinite;
+}
+
+@keyframes btn-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
