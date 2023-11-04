@@ -1,4 +1,5 @@
 import React from "react";
+import { useLoaderData } from "react-router-dom";
 
 // components
 import MessagesLayout from "../../components/MessagesLayout/MessagesLayout.js";
@@ -12,12 +13,14 @@ import MessagesList from "../../modules/MessagesList/index.js";
 import Message from "../../modules/Message/index.js";
 
 export default function Dialog() {
+  const chatData = useLoaderData()
+
   return (
     <MessagesLayout>
       <HeaderLayout>
-        <Avatar />
+        <Avatar src={chatData?.avatarUrl} />
         <ChatInfo
-          chatName={'chat name'}
+          chatName={chatData?.username}
         />
         <ButtonMenu
           type={'kebab'}
