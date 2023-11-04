@@ -1,0 +1,13 @@
+.list {
+  display: grid;
+  gap: 10px;
+
+  overflow-y: scroll;
+  max-height: calc(100vh - 95px);
+
+  padding-right: 5px;
+  padding-top: 5px;
+
+  scrollbar-color: #47A992 #DDE6ED;
+  scrollbar-width: thin;
+}

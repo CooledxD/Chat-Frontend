@@ -1,0 +1,59 @@
+.card {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto 1fr auto;
+  gap: 5px;
+  align-items: center;
+  border-radius: 6px;
+
+  padding: 5px;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+.card:hover {
+  background-color: #47A992;
+}
+
+.card__inner {
+  display: grid;
+  gap: 5px;
+
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-semibold);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.time {
+  font-size: 0.9rem;
+}
+
+.notification {
+  padding: 2px 6px;
+  justify-self: center;
+
+  background-color: #2196F3;
+  color: white;
+
+  font-family: var(--font-bold);
+  font-size: 0.8rem;
+
+  border-radius: 15px;
+}
+
+/* state */
+
+.overflow_hidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text_white {
+  color: white;
+}
