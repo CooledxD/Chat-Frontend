@@ -23,9 +23,11 @@ import PrivateRoute from "./components/PrivateRoute/PrivateRoute.js";
 import { loginAction } from "./modules/AuthForm/index.js";
 import { registerAction } from "./modules/AuthForm/index.js";
 import { avatarAction } from "./modules/AvatarUpload/index.js";
+import { messageAction } from "./modules/Message/index.js";
 
 // loaders
 import { loader as loaderUserData } from "./pages/Chat/utils/loader.js";
+import { loader as loaderChatData } from './pages/Dialog/loader.js'
 
 // styles
 import './index.css'
@@ -58,8 +60,10 @@ export default function App() {
             loader={loaderUserData}
           >
             <Route 
-              path=":userId" 
+              path=":chatId" 
               element={<Dialog />}
+              loader={loaderChatData}
+              action={messageAction}
             />
             <Route 
               path="profile" 
